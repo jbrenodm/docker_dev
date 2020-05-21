@@ -1,2 +1,2 @@
-databases/mssql/**
-databases/mysql/**
+mssql/
+mysql/
