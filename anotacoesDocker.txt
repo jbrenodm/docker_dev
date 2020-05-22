@@ -30,7 +30,7 @@
     * Fazer Download da IMAGEM
         $ docker pull jbrenodm/mysql:5.7
     * Criar CONTAINER
-        $ docker run -d --name mysql5.7 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes --network="host" jbrenodm/mysql:5.7
+        $ docker run -d --name mysql5.7 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes --network="host" -v $PWD/db_volumes/mysql:/var/lib/mysql jbrenodm/mysql:5.7
 
 ## MSQ SQLSERVER 2019 Developer ##
     * Criar IMAGEM 
@@ -41,4 +41,4 @@
     * Fazer Download da IMAGEM
         $ docker pull jbrenodm/mssql:2019dev
     * Criar CONTAINER
-        $ docker run -d --name mssql2019dev -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Senha123" --network="host" jbrenodm/mssql:2019dev
+        $ docker run -d --name mssql2019dev -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Senha123" --network="host" -v $PWD/db_volumes/mssql:/var/opt/mssql jbrenodm/mssql:2019dev
