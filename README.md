@@ -20,6 +20,10 @@ INSTRUCOES:
         $ docker pull jbrenodm/php-apache:7.3    
     * Criar CONTAINER
         $ docker run -d --name php7.3-apache8787 -p 8787:80 -v $PWD/host_container/projetos/php7:/var/www/html jbrenodm/php-apache:7.3
+    * Instalar e Habilitar o Xdebug
+        ** Dentro do container **
+            - pecl install xdebug
+            - docker-php-ext-enable xdebug
 
 ## PHP 5.6 APACHE ##
     * Criar IMAGEM 
@@ -42,6 +46,10 @@ INSTRUCOES:
         $ docker pull jbrenodm/mysql:5.7
     * Criar CONTAINER
         $ docker run -d --name mysql5.7 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes --network="host" -v $PWD/host_container/databases/mysql:/var/lib/mysql jbrenodm/mysql:5.7
+    * Instalar e Habilitar o Xdebug
+        ** Dentro do container **
+            - pecl install xdebug
+            - docker-php-ext-enable xdebug
 
 ## MSQ SQLSERVER 2019 Developer ##
     * Criar IMAGEM 
