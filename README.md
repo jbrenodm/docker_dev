@@ -2,10 +2,11 @@
 Ambiente de Desenvolvimento com Docker
 
 Servicos disponiveis neste ambiente:
-  * PHP-Apache 7.3
-  * PHP-Apache 5.6
+  * PHP-Apache 7.3 and Xdebug
+  * PHP-Apache 5.6 and Xdebug
   * MySQL 5.7
   * MSSQL Server 2019 Developer Edition
+  * Portainer
 
 
 INSTRUCOES:
@@ -24,6 +25,12 @@ INSTRUCOES:
         ** Dentro do container **
             - pecl install xdebug
             - docker-php-ext-enable xdebug
+            - "reiniciar o container"
+            - echo "xdebug.remote_autostart=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+            - echo "xdebug.remote_enable=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+            - echo "xdebug.remote_host=host.docker.internal" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+            - echo "xdebug.remote_connect_back=on" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+            - "reiniciar o container"
 
 ## PHP 5.6 APACHE ##
     * Criar IMAGEM 
@@ -39,6 +46,12 @@ INSTRUCOES:
         ** Dentro do container **
             - pecl install xdebug
             - docker-php-ext-enable xdebug
+            - "reiniciar o container"
+            - echo "xdebug.remote_autostart=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+            - echo "xdebug.remote_enable=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+            - echo "xdebug.remote_host=host.docker.internal" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+            - echo "xdebug.remote_connect_back=on" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+            - "reiniciar o container"
 
 ## MySQL 5.7 ##
     * Criar IMAGEM 
