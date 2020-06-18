@@ -61,3 +61,9 @@ INSTRUCOES:
         $ docker pull jbrenodm/mssql:2019dev
     * Criar CONTAINER
         $ docker run -d --name mssql2019dev -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Senha123" --network="host" -v $PWD/host_container/databases/mssql:/host_container/databases/mssql jbrenodm/mssql:2019dev
+
+## PORTAINER ##
+    * Criar CONTAINER
+        $ docker volume create portainer_data
+    * Criar CONTAINER
+        $ docker run -d -p 8000:8000 -p 9999:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
