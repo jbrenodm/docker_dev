@@ -2,3 +2,6 @@
 
 *
 !.gitignore
+!index.php
+!phpinfo.php
+!favicon.ico
