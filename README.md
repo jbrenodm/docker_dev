@@ -24,8 +24,8 @@ INSTRUCOES:
     * Instalar e Habilitar o Xdebug
         ** Dentro do container **
             * Instalar Extenções
-                -docker-php-ext-install pdo pdo_mysql
-                -docker-php-ext-install ldap
+                - docker-php-ext-install pdo pdo_mysql
+                <!-- - docker-php-ext-install ldap -->
                 - "reiniciar o container"
             * Instalar Xdebug            
               - pecl install xdebug
